@@ -27,4 +27,7 @@ package-install:
 brain-games:
 	poetry run brain-games
 
-.PHONY: install test lint selfcheck check build publish package-install brain-games
+brain-even:
+	poetry run brain-even
+
+.PHONY: install test lint selfcheck check build publish package-install brain-games brain-even
