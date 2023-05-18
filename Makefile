@@ -24,10 +24,19 @@ publish:
 package-install:
 	python3 -m pip install --user dist/*.whl
 
+package-reinstall:
+	python3 -m pip install --user --force-reinstall dist/*.whl
+
+package-uninstall:
+	python3 -m pip uninstall hexlet-code
+
 brain-games:
 	poetry run brain-games
 
 brain-even:
 	poetry run brain-even
+
+brain-calc:
+	poetry run brain-calc
 
 .PHONY: install test lint selfcheck check build publish package-install brain-games brain-even
