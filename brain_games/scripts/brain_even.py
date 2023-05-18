@@ -1,11 +1,17 @@
 #! /usr/bin/env python3
-from brain_games.even_game import run_even_game
-from brain_games.cli import welcome_user
+import sys
+import pathlib
+
+from brain_games.storage import get_game_location, download_game
+from brain_games.engine import start_game
 
 
 def main():
-    name = welcome_user()
-    run_even_game(name)
+    script_path = pathlib.PurePath(sys.argv[0])
+    script_name = script_path.name
+    game_location = get_game_location(script_name)
+    game = download_game(game_location)
+    start_game(game)
 
 
 if __name__ == "__main__":
