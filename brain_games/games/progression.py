@@ -1,9 +1,37 @@
-GAME_RULES = "Progression game"
+"""
+
+This module implements Progression game's logic.
+
+"""
+
+import random
+
+from brain_games.constants import QUESTION_TEMPLATE, RANDOM_RANGE
+
+
+PROGRESSION_LENGTH_RANGE = (10, 15)
+PROGRESSION_STEP_RANGE = (1, 10)
+GAME_RULES = "What number is missing in the progression?"
+
+
+def get_progression() -> list:
+    start = random.randrange(*RANDOM_RANGE)
+    step = random.randrange(*PROGRESSION_STEP_RANGE)
+    length = random.randrange(*PROGRESSION_LENGTH_RANGE)
+    stop = start + length * step
+    progression = list(range(start, stop, step))
+    return progression
 
 
 def ask_question():
-    return "empty", "empty"
+    progression = get_progression()
+    random_index = random.randrange(len(progression))
+    correct_answer = str(progression[random_index])
+    progression[random_index] = ".."
+    question = QUESTION_TEMPLATE.format(
+            question=" ".join(map(str, progression)))
+    return question, correct_answer
 
 
 def check_answer(user_answer, correct_answer):
-    return True
+    return user_answer.strip().lower() == correct_answer
