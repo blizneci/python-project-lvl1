@@ -11,7 +11,7 @@ from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
 
 
 GAME_RULES = "What is the result of the expression?"
-EXPRESSION_TEMPLATE = "{operands[0]} {operation} {operands[1]}"
+EXPRESSION_TEMPLATE = "{first_operand} {operation} {second_operand}"
 
 OPERATORS = {
         "+": operator.add,
@@ -25,11 +25,9 @@ def get_expression() -> tuple:
     second_operand = randint(*RANDOM_RANGE)
     operation, function = choice(tuple(OPERATORS.items()))
     correct_answer = str(function(first_operand, second_operand))
-    operands = [str(first_operand), str(second_operand)]
-    if second_operand < 0:
-        operands[1] = "({operand})".format(operand=second_operand)
     expression = EXPRESSION_TEMPLATE.format(operation=operation,
-                                            operands=operands)
+                                            first_operand=first_operand,
+                                            second_operand=second_operand)
     return expression, correct_answer
 
 
