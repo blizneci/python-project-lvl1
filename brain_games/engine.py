@@ -4,6 +4,8 @@ This module implements game engine.
 
 """
 
+from types import ModuleType
+
 import prompt
 
 from brain_games.cli import welcome_user
@@ -12,7 +14,7 @@ from brain_games.constants import (CORRECT_ANSWER_REPLY, WRONG_ANSWER_TEMPLATE,
                                    CONGRATULATIONS_TEMPLATE, ANSWER_PROMPT)
 
 
-def start_game(game):
+def start_game(game: ModuleType) -> None:
     user_name = welcome_user()
     print(game.GAME_RULES)
     for _ in range(GUESS_CNT):
