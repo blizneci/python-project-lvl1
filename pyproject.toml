@@ -9,9 +9,9 @@ packages = [
 ]
 repository = "https://github.com/blizneci/python-project-lvl1"
 classifiers = [
-    Intended Audience :: Education
-    Natural Language :: English
-    Topic :: Education
+    "Intended Audience :: Education",
+    "Natural Language :: English",
+    "Topic :: Education",
 ]
 
 [tool.poetry.dependencies]
