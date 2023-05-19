@@ -1,9 +1,31 @@
-GAME_RULES = "Prime numbers game"
+"""
+
+This module implements Prime number game's logic.
+
+"""
+
+import math
+import random
+
+from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
+
+
+GAME_RULES = 'Answer "yes" if the given number is prime. Otherwise answer "no".'
+FIRST_PRIME_NUMBER = 2
+
+
+def is_prime(number):
+    if number <= 1:
+        return False
+    largest_divider = int(math.sqrt(number))
+    for i in range(FIRST_PRIME_NUMBER, largest_divider + 1):
+        if number % i == 0:
+            return False
+    return True
 
 
 def ask_question():
-    return "empty", "empty"
-
-
-def check_answer(user_answer, correct_answer):
-    return True
+    number = abs(random.randrange(*RANDOM_RANGE))
+    correct_answer = "yes" if is_prime(number) else "no"
+    question = QUESTION_TEMPLATE.format(question=number)
+    return question, correct_answer
