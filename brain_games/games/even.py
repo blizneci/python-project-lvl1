@@ -1,4 +1,8 @@
-"""Even game's logic"""
+"""
+
+This module implements Even games's logic.
+
+"""
 
 from random import randint
 
