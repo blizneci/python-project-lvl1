@@ -2,7 +2,7 @@
 
 """
 
-This module gets game from storage and starts it.
+This module only prints welcome message.
 
 """
 

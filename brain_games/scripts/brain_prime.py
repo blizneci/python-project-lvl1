@@ -2,23 +2,16 @@
 
 """
 
-This module gets game from storage and starts it.
+This module starts brain-prime game.
 
 """
 
-import sys
-import pathlib
 
-from brain_games import storage, engine
-# from brain_games.storage import get_game_location, download_game
-# from brain_games.engine import start_game
+from brain_games import engine
+from brain_games.games import prime as game
 
 
 def main():
-    script_path = pathlib.PurePath(sys.argv[0])
-    script_name = script_path.name
-    game_location = storage.get_game_location(script_name)
-    game = storage.download_game(game_location)
     engine.start_game(game)
 
 
