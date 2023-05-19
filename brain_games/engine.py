@@ -1,7 +1,8 @@
 """
-Games engine
-"""
 
+This module implements game engine.
+
+"""
 
 import prompt
 
