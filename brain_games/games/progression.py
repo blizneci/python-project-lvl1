@@ -15,9 +15,9 @@ GAME_RULES = "What number is missing in the progression?"
 
 
 def get_progression() -> list:
-    start = random.randrange(*RANDOM_RANGE)
-    step = random.randrange(*PROGRESSION_STEP_RANGE)
-    length = random.randrange(*PROGRESSION_LENGTH_RANGE)
+    start = random.randint(*RANDOM_RANGE)
+    step = random.randint(*PROGRESSION_STEP_RANGE)
+    length = random.randint(*PROGRESSION_LENGTH_RANGE)
     stop = start + length * step
     progression = list(range(start, stop, step))
     return progression
