@@ -1,11 +1,17 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "A set of 5 games for your brain."
 authors = ["Kirill Zhelvakov <blzneci.89@gmail.com>"]
 readme = "README.md"
 packages = [
     { include = "brain_games" },
+]
+repository = "https://github.com/blizneci/python-project-lvl1"
+classifiers = [
+    Intended Audience :: Education
+    Natural Language :: English
+    Topic :: Education
 ]
 
 [tool.poetry.dependencies]
