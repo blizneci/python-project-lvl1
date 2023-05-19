@@ -6,7 +6,6 @@ This module starts brain-prime game.
 
 """
 
-
 from brain_games import engine
 from brain_games.games import prime as game
 

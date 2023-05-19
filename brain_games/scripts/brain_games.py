@@ -6,7 +6,6 @@ This module only prints welcome message.
 
 """
 
-
 from brain_games import cli
 
 

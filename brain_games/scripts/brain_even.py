@@ -6,7 +6,6 @@ This module starts brain-even game.
 
 """
 
-
 from brain_games import engine
 from brain_games.games import even as game
 

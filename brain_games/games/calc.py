@@ -13,7 +13,6 @@ from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
 GAME_RULES = "What is the result of the expression?"
 EXPRESSION_TEMPLATE = "{operands[0]} {operation} {operands[1]}"
 
-
 OPERATORS = {
         "+": operator.add,
         "-": operator.sub,

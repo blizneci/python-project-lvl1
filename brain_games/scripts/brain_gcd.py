@@ -6,7 +6,6 @@ This module starts brain-gcd game.
 
 """
 
-
 from brain_games import engine
 from brain_games.games import gcd as game
 
