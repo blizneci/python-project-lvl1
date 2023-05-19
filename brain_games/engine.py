@@ -21,7 +21,7 @@ def start_game(game: ModuleType) -> None:
         question, correct_answer = game.ask_question()
         print(question)
         user_answer = prompt.string(ANSWER_PROMPT)
-        if game.check_answer(user_answer, correct_answer):
+        if user_answer.strip().lower() == correct_answer:
             print(CORRECT_ANSWER_REPLY)
         else:
             print(WRONG_ANSWER_TEMPLATE.format(

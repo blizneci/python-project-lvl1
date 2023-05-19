@@ -37,7 +37,3 @@ def ask_question() -> tuple:
     expression, correct_answer = get_expression()
     question = QUESTION_TEMPLATE.format(question=expression)
     return question, correct_answer
-
-
-def check_answer(user_answer: str, correct_answer: str) -> bool:
-    return user_answer.strip().lower() == correct_answer

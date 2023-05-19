@@ -31,7 +31,3 @@ def ask_question():
     question = QUESTION_TEMPLATE.format(
             question=" ".join(map(str, progression)))
     return question, correct_answer
-
-
-def check_answer(user_answer, correct_answer):
-    return user_answer.strip().lower() == correct_answer

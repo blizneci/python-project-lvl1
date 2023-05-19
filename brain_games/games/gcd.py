@@ -26,7 +26,3 @@ def ask_question() -> tuple:
     question = QUESTION_TEMPLATE.format(question=" ".join(map(str, pair)))
     correct_answer = str(math.gcd(*pair))
     return question, correct_answer
-
-
-def check_answer(user_answer, correct_answer):
-    return user_answer.strip().lower() == correct_answer
