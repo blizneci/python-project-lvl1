@@ -29,5 +29,5 @@ def ask_question():
     correct_answer = str(progression[random_index])
     progression[random_index] = ".."
     question = QUESTION_TEMPLATE.format(
-            question=" ".join(map(str, progression)))
+        question=" ".join(map(str, progression)))
     return question, correct_answer

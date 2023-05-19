@@ -14,10 +14,10 @@ GAME_RULES = "What is the result of the expression?"
 EXPRESSION_TEMPLATE = "{first_operand} {operation} {second_operand}"
 
 OPERATORS = {
-        "+": operator.add,
-        "-": operator.sub,
-        "*": operator.mul,
-        }
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+}
 
 
 def get_expression() -> tuple:
