@@ -14,7 +14,7 @@ from brain_games.cli import welcome_user
 ANSWER_PROMPT = "Your answer: "
 CONGRATULATIONS_TEMPLATE = 'Congratulations, {name}!'
 CORRECT_ANSWER_REPLY = 'Correct!'
-GUESS_CNT = 3
+NUMBER_OF_ROUNDS = 3
 QUESTION_TEMPLATE = "Question: {question}"
 WRONG_ANSWER_TEMPLATE = '{answer!r} is wrong answer ;(. ' + \
     'Correct answer was {correct_answer!r}.\n' + \
@@ -24,7 +24,7 @@ WRONG_ANSWER_TEMPLATE = '{answer!r} is wrong answer ;(. ' + \
 def run(game: ModuleType) -> None:
     user_name = welcome_user()
     print(game.GAME_RULES)
-    for _ in range(GUESS_CNT):
+    for _ in range(NUMBER_OF_ROUNDS):
         question, correct_answer = game.ask_question()
         print(QUESTION_TEMPLATE.format(question=question))
         user_answer = prompt.string(ANSWER_PROMPT)
