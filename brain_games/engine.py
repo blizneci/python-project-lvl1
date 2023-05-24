@@ -9,12 +9,16 @@ from types import ModuleType
 import prompt
 
 from brain_games.cli import welcome_user
-from brain_games.constants import GUESS_CNT
-from brain_games.constants import (CORRECT_ANSWER_REPLY, WRONG_ANSWER_TEMPLATE,
-                                   CONGRATULATIONS_TEMPLATE, ANSWER_PROMPT)
 
 
+ANSWER_PROMPT = "Your answer: "
+CONGRATULATIONS_TEMPLATE = 'Congratulations, {name}!'
+CORRECT_ANSWER_REPLY = 'Correct!'
+GUESS_CNT = 3
 QUESTION_TEMPLATE = "Question: {question}"
+WRONG_ANSWER_TEMPLATE = '{answer!r} is wrong answer ;(. ' + \
+    'Correct answer was {correct_answer!r}.\n' + \
+    'Let\'s try again, {name}!'
 
 
 def start_game(game: ModuleType) -> None:
