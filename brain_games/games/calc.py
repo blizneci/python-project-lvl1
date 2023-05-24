@@ -7,7 +7,7 @@ This module implements Calculator game's logic.
 import operator
 from random import randint, choice
 
-from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
+from brain_games.constants import RANDOM_RANGE
 
 
 GAME_RULES = "What is the result of the expression?"
@@ -33,5 +33,4 @@ def get_expression() -> tuple:
 
 def ask_question() -> tuple:
     expression, correct_answer = get_expression()
-    question = QUESTION_TEMPLATE.format(question=expression)
-    return question, correct_answer
+    return expression, correct_answer

@@ -6,7 +6,7 @@ This module implements Progression game's logic.
 
 import random
 
-from brain_games.constants import QUESTION_TEMPLATE, RANDOM_RANGE
+from brain_games.constants import RANDOM_RANGE
 
 
 PROGRESSION_LENGTH_RANGE = (10, 15)
@@ -28,6 +28,5 @@ def ask_question():
     random_index = random.randrange(len(progression))
     correct_answer = str(progression[random_index])
     progression[random_index] = ".."
-    question = QUESTION_TEMPLATE.format(
-        question=" ".join(map(str, progression)))
+    question = " ".join(map(str, progression))
     return question, correct_answer

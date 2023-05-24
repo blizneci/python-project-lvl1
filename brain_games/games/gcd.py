@@ -7,7 +7,7 @@ This module implements GCD game's logic.
 import math
 from random import randint, sample
 
-from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
+from brain_games.constants import RANDOM_RANGE
 
 
 GAME_RULES = "Find the greatest common divisor of given numbers."
@@ -23,6 +23,6 @@ def get_pair() -> list:
 
 def ask_question() -> tuple:
     pair = get_pair()
-    question = QUESTION_TEMPLATE.format(question=" ".join(map(str, pair)))
+    question = " ".join(map(str, pair))
     correct_answer = str(math.gcd(*pair))
     return question, correct_answer

@@ -14,12 +14,15 @@ from brain_games.constants import (CORRECT_ANSWER_REPLY, WRONG_ANSWER_TEMPLATE,
                                    CONGRATULATIONS_TEMPLATE, ANSWER_PROMPT)
 
 
+QUESTION_TEMPLATE = "Question: {question}"
+
+
 def start_game(game: ModuleType) -> None:
     user_name = welcome_user()
     print(game.GAME_RULES)
     for _ in range(GUESS_CNT):
         question, correct_answer = game.ask_question()
-        print(question)
+        print(QUESTION_TEMPLATE.format(question=question))
         user_answer = prompt.string(ANSWER_PROMPT)
         if user_answer.strip().lower() == correct_answer:
             print(CORRECT_ANSWER_REPLY)

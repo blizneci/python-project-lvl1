@@ -7,7 +7,7 @@ This module implements Prime number game's logic.
 import math
 import random
 
-from brain_games.constants import (QUESTION_TEMPLATE, RANDOM_RANGE)
+from brain_games.constants import RANDOM_RANGE
 
 
 GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
@@ -27,5 +27,4 @@ def is_prime(number):
 def ask_question():
     number = abs(random.randrange(*RANDOM_RANGE))
     correct_answer = "yes" if is_prime(number) else "no"
-    question = QUESTION_TEMPLATE.format(question=number)
-    return question, correct_answer
+    return str(number), correct_answer
