@@ -23,7 +23,7 @@ WRONG_ANSWER_TEMPLATE = '{answer!r} is wrong answer ;(. ' + \
 
 def run(game: ModuleType) -> None:
     user_name = welcome_user()
-    print(game.GAME_RULES)
+    print(game.RULES)
     for _ in range(NUMBER_OF_ROUNDS):
         question, correct_answer = game.form_question_answer()
         print(QUESTION_TEMPLATE.format(question=question))

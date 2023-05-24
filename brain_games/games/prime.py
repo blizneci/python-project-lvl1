@@ -10,7 +10,7 @@ import random
 from brain_games.constants import RANDOM_RANGE
 
 
-GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 FIRST_PRIME_NUMBER = 2
 
 

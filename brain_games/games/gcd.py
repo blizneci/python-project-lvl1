@@ -10,7 +10,7 @@ from random import randint, sample
 from brain_games.constants import RANDOM_RANGE
 
 
-GAME_RULES = "Find the greatest common divisor of given numbers."
+RULES = "Find the greatest common divisor of given numbers."
 
 
 def get_pair() -> list:

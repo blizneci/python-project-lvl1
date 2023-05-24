@@ -11,7 +11,7 @@ from brain_games.constants import RANDOM_RANGE
 
 PROGRESSION_LENGTH_RANGE = (10, 15)
 PROGRESSION_STEP_RANGE = (1, 10)
-GAME_RULES = "What number is missing in the progression?"
+RULES = "What number is missing in the progression?"
 
 
 def generate_progression(start: int, step: int, length: int) -> list:

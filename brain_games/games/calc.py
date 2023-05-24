@@ -11,7 +11,7 @@ from typing import Callable
 from brain_games.constants import RANDOM_RANGE
 
 
-GAME_RULES = "What is the result of the expression?"
+RULES = "What is the result of the expression?"
 EXPRESSION_TEMPLATE = "{first_operand} {operation} {second_operand}"
 
 OPERATORS = {

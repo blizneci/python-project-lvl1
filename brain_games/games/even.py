@@ -9,7 +9,7 @@ from random import randint
 from brain_games.constants import RANDOM_RANGE
 
 
-GAME_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
+RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number: int) -> bool:
