@@ -5,7 +5,8 @@ This module implements Calculator game's logic.
 """
 
 import operator
-from random import randint, choice
+from random import choice, sample
+from typing import Callable
 
 from brain_games.constants import RANDOM_RANGE
 
@@ -20,17 +21,21 @@ OPERATORS = {
 }
 
 
-def get_expression() -> tuple:
-    first_operand = randint(*RANDOM_RANGE)
-    second_operand = randint(*RANDOM_RANGE)
-    operation, function = choice(tuple(OPERATORS.items()))
-    correct_answer = str(function(first_operand, second_operand))
+def generate_answer(x: int, y: int, func: Callable[[int, int], int]) -> str:
+    answer = func(x, y)
+    return str(answer)
+
+
+def generate_expression(x: int, y: int, operation: str) -> str:
     expression = EXPRESSION_TEMPLATE.format(operation=operation,
-                                            first_operand=first_operand,
-                                            second_operand=second_operand)
-    return expression, correct_answer
+                                            first_operand=x,
+                                            second_operand=y)
+    return expression
 
 
 def ask_question() -> tuple:
-    expression, correct_answer = get_expression()
+    operands = sample(range(*RANDOM_RANGE), 2)
+    operation, function = choice(tuple(OPERATORS.items()))
+    expression = generate_expression(*operands, operation)
+    correct_answer = generate_answer(*operands, function)
     return expression, correct_answer
