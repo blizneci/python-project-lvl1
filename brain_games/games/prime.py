@@ -14,7 +14,7 @@ RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 FIRST_PRIME_NUMBER = 2
 
 
-def is_prime(number):
+def is_prime(number: int) -> bool:
     if number <= 1:
         return False
     largest_divider = int(math.sqrt(number))
@@ -24,7 +24,7 @@ def is_prime(number):
     return True
 
 
-def form_question_answer():
+def form_question_answer() -> tuple[str, str]:
     number = abs(random.randrange(*RANDOM_RANGE))
     correct_answer = "yes" if is_prime(number) else "no"
     return str(number), correct_answer
