@@ -11,7 +11,7 @@ from brain_games.games import even as game
 
 
 def main():
-    engine.start_game(game)
+    engine.run(game)
 
 
 if __name__ == "__main__":

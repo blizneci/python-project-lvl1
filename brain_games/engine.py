@@ -21,7 +21,7 @@ WRONG_ANSWER_TEMPLATE = '{answer!r} is wrong answer ;(. ' + \
     'Let\'s try again, {name}!'
 
 
-def start_game(game: ModuleType) -> None:
+def run(game: ModuleType) -> None:
     user_name = welcome_user()
     print(game.GAME_RULES)
     for _ in range(GUESS_CNT):
