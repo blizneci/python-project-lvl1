@@ -13,16 +13,14 @@ from brain_games.constants import RANDOM_RANGE
 RULES = "Find the greatest common divisor of given numbers."
 
 
-def get_pair() -> list:
-    pair = sample(range(*RANDOM_RANGE), 2)
-    if 0 in pair:
-        zero_index = pair.index(0)
-        pair[zero_index] = randint(range(1, RANDOM_RANGE[1]))
+def generate_pair_without_zero(boarders: tuple[int, int]) -> list:
+    numbers = [number for number in range(*boarders) if number != 0]
+    pair = sample(numbers, 2)
     return pair
 
 
 def form_question_answer() -> tuple:
-    pair = get_pair()
+    pair = generate_pair_without_zero(RANDOM_RANGE)
     question = " ".join(map(str, pair))
     correct_answer = str(math.gcd(*pair))
     return question, correct_answer
