@@ -16,7 +16,7 @@ def is_even(number: int) -> bool:
     return number % 2 == 0
 
 
-def ask_question() -> tuple:
+def form_question_answer() -> tuple:
     number = randint(*RANDOM_RANGE)
     correct_answer = "yes" if is_even(number) else "no"
     return str(number), correct_answer

@@ -25,7 +25,7 @@ def run(game: ModuleType) -> None:
     user_name = welcome_user()
     print(game.GAME_RULES)
     for _ in range(NUMBER_OF_ROUNDS):
-        question, correct_answer = game.ask_question()
+        question, correct_answer = game.form_question_answer()
         print(QUESTION_TEMPLATE.format(question=question))
         user_answer = prompt.string(ANSWER_PROMPT)
         if user_answer.strip().lower() == correct_answer:

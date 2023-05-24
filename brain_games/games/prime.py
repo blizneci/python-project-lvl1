@@ -24,7 +24,7 @@ def is_prime(number):
     return True
 
 
-def ask_question():
+def form_question_answer():
     number = abs(random.randrange(*RANDOM_RANGE))
     correct_answer = "yes" if is_prime(number) else "no"
     return str(number), correct_answer

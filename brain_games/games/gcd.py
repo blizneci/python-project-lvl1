@@ -21,7 +21,7 @@ def get_pair() -> list:
     return pair
 
 
-def ask_question() -> tuple:
+def form_question_answer() -> tuple:
     pair = get_pair()
     question = " ".join(map(str, pair))
     correct_answer = str(math.gcd(*pair))

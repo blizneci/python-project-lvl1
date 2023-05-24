@@ -33,7 +33,7 @@ def generate_expression(x: int, y: int, operation: str) -> str:
     return expression
 
 
-def ask_question() -> tuple:
+def form_question_answer() -> tuple:
     operands = sample(range(*RANDOM_RANGE), 2)
     operation, function = choice(tuple(OPERATORS.items()))
     expression = generate_expression(*operands, operation)

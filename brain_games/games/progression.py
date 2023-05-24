@@ -20,7 +20,7 @@ def generate_progression(start: int, step: int, length: int) -> list:
     return progression
 
 
-def ask_question():
+def form_question_answer():
     start = random.randint(*RANDOM_RANGE)
     step = random.randint(*PROGRESSION_STEP_RANGE)
     length = random.randint(*PROGRESSION_LENGTH_RANGE)
